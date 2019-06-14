@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+.root {
+	background-color:#FFFFFF;
+	border:6px solid #999999;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	max-width:960px;
+	position:absolute;
+	text-align:center;
+}
+
+.handle {
+	padding:2px;
+	background-color:#7788a8;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:move;
+}
+
+.trResaltar4 {
+	background-color:#FFFFFF;
+	height:24px;
+}
+
+.trResaltarCuadro {
+	background-color:#ffffff;
+	height:24px;
+}
+
+.trResaltar5 {
+	background-color:#f2f4f7;
+	height:24px;
+}
+
+.trResaltar4 td, .trResaltar5 td {
+	padding:2px;
+}
+
+.trResaltar4:hover, .trResaltar4:hover input, .trResaltar4:hover select, .trResaltar4:hover span,
+.trResaltar5:hover, .trResaltar5:hover input, .trResaltar5:hover select, .trResaltar5:hover span {
+	background-color:#7788a8;
+	color:#FFFFFF;
+}
+
+.trResaltarCuadro:hover {
+	background-color:#7788a8;
+	color:#000000;
+}
+
+.legend {
+	color:#7788a8;
+	font-weight:bold;
+}
+
+.tdCuadroIntereses {
+
+background: -prefix-linear-gradient(left, white, blue); 
+background: linear-gradient(to top, rgba(120, 0, 220, 0.4),white,rgba(120, 0, 220, 0.4));
+background-repeat: no-repeat;
+background-position: left center;
+color:#000000;
+height: 24px;
+width : 196px;
+background-size: 100% 98%;
+
+}
+.tdCuadroAmortizaciones {
+background: -prefix-linear-gradient(left, white, blue); 
+background: linear-gradient(to top, rgba(0, 0, 255, 0.4),white,rgba(0, 0, 255, 0.4));
+background-repeat: no-repeat;
+background-position: left center;
+color:#000000;
+height: 24px;
+width : 196px;
+background-size: 100% 98%;
+
+}
+.tdCuadroCapital {
+background: -prefix-linear-gradient(left, white, blue); 
+background: linear-gradient(to top, rgba(255, 0, 0, 0.4),white,rgba(255, 0, 0, 0.4));
+background-repeat: no-repeat;
+background-position: left center;
+color:#000000;
+height: 24px;
+width : 196px;
+background-size: 100% 98%;
+
+}
+
+.trCuadro {
+	font-weight:bold
+}
+
+
+.divResaltarVerde{
+    background-color: #bff7cc;
+    border: 1px solid #169c34;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.divResaltarRojo{
+    background-color: #ffcaca;
+    border: 1px solid #ff0000;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.divResaltarAmarillo{
+    background-color: rgb(255, 255, 204);
+    border: 1px solid rgb(210, 210, 2);
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.divResaltarAzul{
+    background-color: #20c8ec;
+    border: 1px solid #0e8aa5;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.divResaltarNaranja{
+    background-color: #fdd89f;
+    border: 1px solid #d8850a;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.divResaltarNaranja:HOVER {
+    background-color: #fcb64e;
+    border: 1px solid #d8850a;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.divResaltarGris{
+    background-color: #d6d6d6;
+    border: 1px solid #a8a8a8;
+    color: rgb(0, 0, 0);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*ACORDEON DE LISTAS*/
+
+
+dl{ margin: 60px auto;}
+dt, dd{ padding: 8px; }
+dt {
+	  background: #7788a8; 
+	  border-radius : 6px;
+	  color: white; 
+	  border-bottom: 2px solid #141414; 
+	  border-top: 1px solid #4E4E4E; 
+	  cursor: pointer;
+	  font-weight:bold;
+	  font-size:20px;
+	  font-color:#ffffff;
+	  font-family:'Helvetica','Verdana','Monaco',sans-serif;
+}
+
+dd{
+	background: #ffffff;
+	line-height: 1.6em; 
+	width: 95%;
+}
+
+dt.activo, dt:hover{ 
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 12%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.72) 39%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.57) 60%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.34) 91%, rgba(0,0,0,0.28) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(12%, rgba(0,0,0,0.91)), color-stop(25%, rgba(0,0,0,0.82)), color-stop(39%, rgba(0,0,0,0.72)), color-stop(51%, rgba(0,0,0,0.63)), color-stop(51%, rgba(0,0,0,0.63)), color-stop(60%, rgba(0,0,0,0.57)), color-stop(76%, rgba(0,0,0,0.45)), color-stop(91%, rgba(0,0,0,0.34)), color-stop(100%, rgba(0,0,0,0.28)));
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 12%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.72) 39%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.57) 60%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.34) 91%, rgba(0,0,0,0.28) 100%);
+background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 12%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.72) 39%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.57) 60%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.34) 91%, rgba(0,0,0,0.28) 100%);
+background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 12%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.72) 39%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.57) 60%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.34) 91%, rgba(0,0,0,0.28) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 12%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.72) 39%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.63) 51%, rgba(0,0,0,0.57) 60%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.34) 91%, rgba(0,0,0,0.28) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+
+	}
+
+/*clase de resumen de porcentajes*/
+.inputPorcentajePositivo {
+
+background: linear-gradient(to top, rgba(0, 0, 255, 0.4),white,rgba(0, 0, 255, 0.4));
+border-radius : 6px;
+background-repeat: no-repeat;
+background-position: left center;
+height: 100%;
+width : 80%;
+background-size: 16% 98%;
+
+
+}
+
+.inputPorcentajeNegativo {
+
+background: linear-gradient(to top, rgba(255, 0, 0, 0.4),white,rgba(255, 0, 0, 0.4));
+border-radius : 6px;
+background-repeat: no-repeat;
+background-position: left center;
+height: 100%;
+width : 80%;
+background-size: 16% 98%;
+
+
+}
+
+
+
+
+
+
+
+
+

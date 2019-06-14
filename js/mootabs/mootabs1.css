@@ -1,0 +1,57 @@
+
+.mootabs_title {
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	height: 24px;
+}
+
+.mootabs_title li {
+	background-color:#CCCCCC;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	color:#000000;
+	cursor: pointer;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 2px;
+	padding: 2px 8px 2px 8px;
+}
+
+.mootabs_title li.active {
+	background-color:#FFFFFF;
+	border-top:1px solid #000000;
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	color:#000000;
+}
+
+.mootabs_title li.over {
+	background-color:#EAF4FF;
+	border-top:1px solid #0080FF;
+	border-left:1px solid #0080FF;
+	border-right:1px solid #0080FF;
+}
+
+
+
+.mootabs_panel {
+	border:1px solid #000000;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+	clear: both;
+	display: none;
+	overflow: auto;
+	padding: 2px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+.mootabs_panel.active {
+	background-color:#FFFFFF;
+	display: block;	
+}

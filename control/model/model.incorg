@@ -1,0 +1,206 @@
+<?php
+//Archivo de base de datos
+//funciones para la conexion
+/*$basename="sysgts";
+$host="localhost";
+$user="root";
+$password="";*/
+$con;
+
+
+class connection{
+	
+	public $con;
+	public $basename="sysgts";
+	public $host="localhost";
+	public $user="root";
+	public $password="";
+	
+	public function connect(){
+		$this->con= mysql_connect($this->host,$this->user,$this->password);
+		mysql_select_db($basename,$this->con);
+		@mysql_query("SET NAMES 'utf8'",$this->con);
+	}
+	
+	public function close(){
+		mysql_close($this->con);
+	}
+	
+	public function begin(){
+		return mysql_query("START TRANSACTION;",$this->con);
+	}
+	
+	public function commit(){
+		return mysql_query("COMMIT;",$this->con);
+	}
+	
+	public function rollback(){
+		return mysql_query("ROLLBACK;",$this->con);
+	}
+	
+	public function getQuery($table){
+		return new query($this,$table);
+	}
+}
+
+interface iField{
+	public function getField();
+}
+
+class field implements iField{
+	public $name;
+	public $table;
+	public $type;
+	public $value;
+	public function __construct($fieldName,$tableName,$type="text",$value=""){
+		$this->name=$fieldName;
+		$this->table=$tableName;
+		$this->type=$type;
+		$this->value=$value;
+	}
+	public function getField(){
+		if ($this->table->insertMode){
+			$r= $this->getInsertValue();
+		}else{
+			$r= $this->table.'.'.$this->name;
+			if($this->table->updateMode){
+				$r.='='.$this->getInsertValue();
+			}
+		}
+		return $r;
+	}
+	
+	public function getInsertValue(){
+		switch($this->type){
+			case "text":
+				return "'".$this->value."'";
+		}
+	}
+	
+	public function __toString(){
+		return $this->getField();
+	}
+}
+class table{
+	public $name;
+	public $updateMode=false;
+	public $insertMode=false;
+	//public $primaryKey;
+	public function __construct($tableName,$primaryKey=""){
+		$this->name=$tableName;
+		/*if ($primaryKey=""){
+			
+		}
+		$this->primaryKey=$primaryKey;*/
+	}
+	public function __toString(){
+		return $this->name;
+	}
+}
+
+class criteria implements iField{
+	
+	public $cOne=null;
+	public $cTwo=null;
+	public $expresion="=";
+	public $union=true;
+	
+	public function __construct ($cOne,$cTwo,$expr="=",$union=true){
+		$this->cOne=$cOne;
+		$this->cTwo=$cTwo;
+		$this->expresion=$expr;
+		$this->union=$union;
+	}
+	
+	public function getField(){
+		$r=$this->cOne->getField().' '.$this->expresion.' '.$this->cTwo->getField();
+		if($this->union){
+			$r="(".$r.")";
+		}
+		return $r;
+	}
+	
+	public function __toString(){
+		return $this->getField();
+	}
+}
+
+
+class query{
+	
+	public $fieldObj = array();
+	public $criteria = array();
+	
+	public $tableObj= array();
+	public $connect = NULL;
+	
+	public $field=array();
+	
+	public function doSelect(){
+		$r= "SELECT ";
+		/*foreach($this->fieldObj as $field){
+			$r.= $field.', ';
+		}*/
+		$r.= implode(",",$this->fieldObj);
+		$r.= " FROM ";
+		$r.= implode(",",$this->tableObj);
+		return $r;
+	}
+	
+	public function doInsert(){
+		$r= "INSERT INTO ";
+		//validar 1 sola tabla
+		$r.= $this->tableObj[0];
+		
+		$r.= "(".implode(",",$this->fieldObj).") ";
+		
+		$r.= "VALUES ";
+		
+		$this->tableObj[0]->insertMode=true;
+		$r.= "(".implode(",",$this->fieldObj).") ";
+		$this->tableObj[0]->insertMode=false;
+		
+		return $r;
+	}
+	
+	public function doUpdate(){
+		$r= "UPDATE ";
+		//validar 1 sola tabla
+		$this->tableObj[0]->updateMode=true;
+		$r.= "SET ";
+		$r.= $this->tableObj[0];
+		
+		$r.= "(".implode(",",$this->fieldObj).") ";
+		
+		$this->tableObj[0]->updateMode=false;
+		return $r;
+	}
+	
+	public function __construct($conectObj,$table){
+		$this->connect=$conectObj;
+		$this->tableObj[]=new table($table);
+	}
+	
+	public function add($fieldName,$fieldValue=null,$type="text",$tableName=null){
+		if($tableName==""){
+			$tableName=$this->tableObj[0];
+		}elseif (!is_object($tableName)){
+			$tableName=new table($tableName);
+		}
+		if($fieldName!=""){
+			return $this->fieldObj[] = new field($fieldName,$tableName,$type,$fieldValue);
+		}
+	}
+	
+	public function criteria(){
+		
+	}
+
+}
+
+
+
+
+
+
+?>

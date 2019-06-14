@@ -1,0 +1,65 @@
+
+.xajax_client_div{
+	background:white;
+	padding: 2px;
+	background:#DFDFDF;
+	border:2px solid #9F9F9F;
+	width:550px;
+}
+
+.xajax_client_div_window{
+	/*border-collapse:collapse;*/
+	width:100%;
+}
+
+.xajax_client_div_window caption{
+	background:#9F9F9F;
+	border:1px solid gray;
+	font-weight:bold;
+	padding:2px;
+}
+.xajax_client_div_bar{
+	cursor:move;
+}
+.xajax_client_div_window  td{
+	white-space:no-wrap;
+}
+.xajax_client_div_window  td._label,
+.xajax_client_div_window  td._field{
+	border:1px solid gray;
+	width:25%;
+}
+.xajax_client_div_window  td._label{
+	background:#CFCFCF;
+}
+._xajax_error{
+	visibility :hidden;
+}
+.inputNOTNULL{
+	background:#FFB4B4;
+}
+.inputERROR{
+	background:#60C3FF;
+}
+.xajax_tr{
+	background:#BFBFBF;
+}
+.xajax_tr_impar{
+
+}
+._xajax_overflow{
+	overflow:auto;
+	max-height:100px;
+}
+.xajax_tr:hover,
+.xajax_tr_impar:hover{
+	background:#C8E4FF;
+	cursor:pointer;
+}
+#_xajax_leyend{
+	height:13px;
+	width:13px;
+	margin-right:2px;
+	border:1px solid gray;
+	float:left;
+}

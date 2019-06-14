@@ -1,0 +1,251 @@
+
+td img {display: block;}
+body {
+	/*background-image: url(img/fondo.jpg);*/
+	/*background-repeat:repeat-x;*/
+}
+.marcoprincipal{
+	background:#FFFFFF;
+	width:880px;
+	margin: 0px auto;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align:center;
+}
+h1{
+	font-size: 18px;
+	color: #333333;
+}
+h2{
+	font-size: 16px;
+	color: #333333;
+}
+.marcoblanco{
+	padding: 2px;
+	width:880px;
+}
+.marco {
+	width:880px;
+	/*background:#EEE;*/
+	padding-top:4px;
+	padding-bottom:4px;
+	float:left;
+	text-align:left;
+	background:#FFFFFF;
+}
+.marco2c{
+	width:960px;
+	float:left;
+}
+.columna{
+	float:left;
+	width:450px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.titulo{
+	width:954px;
+	background: url(img/iconos/return.png);
+	/*background:#999999;
+	background:#EEE;*/
+	/*color:#FFFFFF;*/
+	border:1px solid #000000;
+	text-align:center;
+	float:left;
+	padding-top:2px;
+	padding-bottom:2px;
+	margin-left:2px;
+	margin-right:2px;
+}
+.tabla {
+	/*border-collapse:collapse;*/
+	width:100%;
+}
+.etiqueta, .petiqueta{
+	float:left;
+	width:120px;
+	padding-right:5px;
+	padding-top:5px;
+	text-align:right;
+}
+.petiqueta, .petiqueta2{
+	width:145px;
+	text-align:left;
+	width:200px;
+	padding-left:5px;
+}
+.desc{
+	border:1px solid #000000;
+	border-top:0px;
+	text-align:center;
+	padding:5px;
+	margin-left:2px;
+	margin-right:2px;
+}
+.campo{
+	width:470px;
+	height:24px;
+	padding-bottom: 8px;
+	padding-top: 6px;
+}
+.campo2{
+	width:470px;
+	padding-bottom: 8px;
+	padding-top: 6px;
+}
+.capacampo, .capacampo1{
+	border: 1px solid #000000;
+	background: #F2F2F2;
+	padding: 2px;
+	padding-top:6px;
+	height:18px;
+	overflow:auto;
+	text-align:center;
+}
+.capacampo1{
+	width:316px;
+}
+.ajaxlist{
+	display:block;
+	visibility:hidden;
+	position:absolute;
+	border: 1px solid blue;
+	background:#FFFFFF;
+	padding:2px;
+	/*filter: alpha(opacity=90);*/
+	width:500px;
+	/*max-height:300px;
+	overflow:auto;*/
+	/*filter:Chroma(Color = #000000) Shadow(Color=#00FF00, Direction=225);*/
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.overflowlist{
+	overflow:auto;
+	max-height:300px;
+	width:500px;
+}
+.ajaxlitem{
+	padding: 2px;
+	/*width: 400px;*/
+}
+.tooltip, .helptip{
+	border: 2px solid blue;
+	position: absolute;
+	visibility:hidden;
+	/*display:none;*/
+	/*filter: alpha(opacity=80);	*/
+	background: lightyellow url(iconos/information.png);
+	background-repeat:no-repeat;
+	color: #333333;
+	background-position: 6px 6px;
+	padding: 5px 5px 5px 5px;
+	/*mox-box-shadow: 2px 2px 5px #999;*/
+
+}
+.helptip h1{
+	margin-left:20px;
+}
+.helptip h2{
+	margin-left: 5px;
+}
+.helptip p {
+	margin-left: 10px;
+}
+.tooltip{
+	cursor:help;
+	background-position: 5px 50%;
+	padding:3px 3px 3px 25px;
+	border: 1px solid blue;
+}
+.campo label{
+	cursor:help;
+}
+.pagetabla td{
+	/*border-color:#CCCCCC;*/
+	border-left:0px;
+	border-top:0px;
+	padding:2px;
+}
+th{
+	background:#CCCCCC;
+}
+input[type=text]{
+	border: 1px solid black;
+	height:20px;
+	padding-top:1px;
+	padding-bottom:1px;
+}
+.ajaxlitem A:link {
+	COLOR: blue; TEXT-DECORATION: none
+}
+.ajaxlitem A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.ajaxlitem A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.ajaxlitem A:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+
+A.vin:link {
+	COLOR: #0066ff; TEXT-DECORATION: none
+}
+A.vin:visited {
+	COLOR: #0066ff; TEXT-DECORATION: none
+}
+A.vin:active {
+	COLOR: #0066ff; TEXT-DECORATION: none
+}
+A.vin:hover {
+	COLOR: #0066ff; TEXT-DECORATION: underline
+}
+A.ord:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.ord:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.ord:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.ord:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.des{
+	filter:Gray;
+}
+.tdicon{
+	padding: 2px 2px 2px 2px;
+	border-left: 0px;
+}
+.tdcampo, .tdaex{
+	background: #F2F2F2;
+	border:1px solid #000000;
+	padding:2px;
+	text-align:center;
+}
+.tdaex{
+	background:#FFFFFF;
+	border:1px solid #000000;
+}
+.tdinfo{
+	padding:2px;
+}
+.iaex{
+	width:98%;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	height:20px;
+}
+.tdeditcampo{
+	background:#CCCCCC;
+}
+.tdedit, .tdeditcampo{
+	border: 1px solid #999999;
+}
+.req{
+	color:#FF0000;
+}

@@ -1,0 +1,46 @@
+@media print{
+	body{
+		background: #FFFFFF;
+	}
+}
+.toptable, .listtable {
+	width: 100%;
+	border-collapse:collapse;
+}
+.tdtitulo {
+	background-color: #CCCCCC;
+	/*background-color: red;*/
+	text-align:center;
+	border: 1px solid #000000;
+	padding:2px;
+}
+.listtable{
+	border: 2px solid #000000;
+	border-collapse:collapse;
+}
+.listtable td{
+	border-left: 2px solid #000000;
+	border-right: 2px solid #000000;
+	border-bottom: 1px solid #000000;
+	text-align:center;
+}
+.listtable .toptd{
+	border:2px solid #000000;
+}
+.listtable .tdleft{
+	text-align:left;
+}
+.listtable .hiddentdleft{
+	border-top:0px;
+	border-bottom:0px;
+	border-left:0px;
+	text-align:right;
+	padding-right:2px;
+}
+@media print {
+	.noprint, button{
+		display:none;
+	}
+}
+
+/*importar: @import url("rutaarchivo.css") screen o print*/

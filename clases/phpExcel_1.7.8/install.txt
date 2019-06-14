@@ -1,0 +1,106 @@
+**************************************************************************************
+* PHPExcel
+*
+* Copyright (c) 2006 - 2011 PHPExcel
+*
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Lesser General Public
+* License as published by the Free Software Foundation; either
+* version 2.1 of the License, or (at your option) any later version.
+* 
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public
+* License along with this library; if not, write to the Free Software
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+*
+* @copyright  Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)
+* @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+* @version    1.7.8, 2012-10-12
+**************************************************************************************
+
+Requirements
+------------
+
+The following requirements should be met prior to using PHPExcel:
+* PHP version 5.2.0 or higher
+* PHP extension php_zip enabled *)
+* PHP extension php_xml enabled
+* PHP extension php_gd2 enabled (if not compiled in)
+
+*) php_zip is only needed by PHPExcel_Reader_Excel2007, PHPExcel_Writer_Excel2007,
+   PHPExcel_Reader_OOCalc. In other words, if you need PHPExcel to handle .xlsx or .ods
+   files you will need the zip extension, but otherwise not.
+
+
+
+Installation instructions
+-------------------------
+
+Installation is quite easy: copy the contents of the Classes folder to any location
+in your application required.
+
+Example:
+
+If your web root folder is /var/www/ you may want to create a subfolder called
+/var/www/Classes/ and copy the files into that folder so you end up with files:
+
+/var/www/Classes/PHPExcel.php
+/var/www/Classes/PHPExcel/Calculation.php
+/var/www/Classes/PHPExcel/Cell.php
+...
+
+
+
+Getting started
+---------------
+
+A good way to get started is to run some of the tests included in the download.
+Copy the "Tests" folder next to your "Classes" folder from above so you end up with:
+
+/var/www/Tests/01simple.php
+/var/www/Tests/02types.php
+...
+
+Start running the test by pointing your browser to the test scripts:
+
+http://example.com/Tests/01simple.php
+http://example.com/Tests/02types.php
+...
+
+Note: It may be necessary to modify the include/require statements at the beginning of
+each of the test scripts if your "Classes" folder from above is named differently.
+
+
+
+Que tal como estas, acabo solucionar el problema que mencionas.
+
+En primer lugar, segun lo que andube viendo es que se necesita php 5.2 que es el mas actual que cuenta con la libreria que
+se necesita "zlib".
+
+Bueno lo que yo hice fue bajar la aplicacion Appserv en la cual te instala todo en un solo golpe, Apache, PHP, MySQL y
+demas.
+Una vez instalado en el menu Inicio de win, entras a tus programas y buscas el Appserv dentro de este, buscas
+Configuration Server->Edit the php.ini configuration, lo abres y te fijas que cada linea estara precedida por un ;
+(punto y coma) buscas la siguiente linea:
+
+zlib.output_compression = off
+y la pones en on y buscas las siguientes:
+
+;extension=php_xsl.dll
+;extension=php_zip.dll
+
+les quitas los ; para que quede asi
+
+extension=php_xsl.dll
+extension=php_zip.dll
+
+reinicias el servicio de apache, recuerda que en esta aplicacion tu carpeta de publicacion sera www que es donde
+correras tus pags o proyectos y listo a mi me funciono, espero sea igual sino me dices y vemos cual es el problema.
+
+Espero haya sido claro.
+
+Saludos

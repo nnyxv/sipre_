@@ -1,0 +1,85 @@
+.marcoprincipal{
+	width:1000px;
+	margin:auto;
+}
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.marco {
+	width:1000px;
+	/*background:#EEE;*/
+	padding-top:4px;
+	padding-bottom:4px;
+	float:left;
+}
+.tabla, .tablaoculta{
+	width:100%;
+	border: 1px solid #000000;
+	border-collapse:collapse;
+}
+.tablaoculta{
+	border:0px;
+}
+.tabla td{
+	padding-top:2px;
+	padding-bottom:2px;
+}
+.tabla .tddata, .tabla .tddataright, .tabla .tddventa{
+	padding-right:4px;
+	padding-left:4px;
+}
+.tdetiqueta, .tdetiquetaleft{
+	border:1px solid #000000;
+	border-right:0px;
+	text-align:center;
+}
+.tdetiquetaleft{
+	text-align:left;
+}
+.tddata, .tddataright{
+	border:1px solid #000000;
+	border-left:0px;	
+	background:#CCCCCC;
+	text-align:center;
+}
+.tddataright{
+	text-align:right;
+}
+.postetiqueta{
+	border-bottom:1px solid #000000;
+	border-top:1px solid #000000;
+}
+.intable .tddata, .intable .tdetiqueta{
+	border:0px;
+}
+.intable{
+	border:0px;
+	margin:0px;
+	padding:0px;
+}
+.tdtable{
+	vertical-align:top;
+	padding:0px;
+	margin:0px;
+}
+.tdeventa{
+	text-align:center;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+.tdebs{
+	text-align:left;
+	border-bottom:1px solid #000000;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+.tddventa{
+	text-align:right;
+	border-bottom:1px solid #000000;
+	padding-top:5px !important;
+	padding-bottom:5px !important;
+	
+}

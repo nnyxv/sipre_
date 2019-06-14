@@ -1,0 +1,46 @@
+/* http://zendold.lojcomm.com.br/icarousel */
+#example_3 {  
+    position: relative; /* important */  
+    overflow: hidden; /* important */  
+    width: 300px; /* important */  
+    height: 86px; /* important */  
+    margin: 0 85px;  
+    background: #000;  
+}   
+#example_3_frame {
+	position: relative
+}
+#example_3_previous {
+	float: left;
+}
+#example_3_next {
+	float: right;
+}
+#example_3_content {  
+	position: absolute;
+	top: 0;
+	margin-left: 20px;
+}
+#example_3_content li {  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}  
+#example_3_content {  
+	width: 5418px;
+	/*width: 2000px;*/
+}  
+#container_bd #example_3 ul li {  
+	display: block;
+	float: left;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #666;
+	background-color: #000;
+}
+#container_bd #example_3 ul li img {  
+	display: block;
+}
+#container_bd #example_3 img{
+	border:0;
+}

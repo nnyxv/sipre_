@@ -1,0 +1,72 @@
+.xajax_calendar td{
+	font-size:14px;
+	padding:2px;
+}
+
+.xajax_calendar_day_nolab{
+	background:#FFBF00;
+	border:1px solid #FFBF00;
+}
+.xajax_calendar_day_nolab:hover{
+	background:#FFEBAF;
+	cursor:pointer;
+	border:1px solid #BFC0BD;
+}
+.xajax_calendar_day_nolab_parcial{
+	background:#B3DF00;
+}
+.xajax_calendar_day_nolab_parcial:hover{
+	background:#DAEF86;
+	border:1px solid #BFC0BD;
+	cursor:pointer;
+}
+
+.xajax_calendar_day, 
+.xajax_calendar{
+	background:#EEFFEE;
+	border:1px solid #EEFFEE;
+	color:#2B4CFE;
+}
+.xajax_calendar_selectday{
+	background: #F8FFF8;
+	color:#000000;
+	border:1px solid #000000;
+}
+
+.xajax_calendar_day:hover{
+	cursor:pointer;
+	background:#CFFF9F;
+	border:1px solid #BFC0BD;
+}
+
+.xajax_calendar_selectday:hover{
+	cursor:default;
+	
+}
+
+.xajax_calendar_week{
+	background:#DDFFBB;
+	text-align:center;
+	border-bottom:1px solid #87A987;
+	color:#000000;
+}
+
+.xajax_calendar_title{
+	font-size:12px;
+	text-align:center;
+	background:#225500;
+	color:#C0C5CD;
+}
+
+.xajax_calendar_button{
+	font-size:12px;
+	text-align:center;
+	background:#667766;
+	color:#FEFEF2;
+}
+
+.xajax_calendar_button:hover{
+	background:#C3D5FD;
+	cursor:pointer;
+	color:#000000;
+}

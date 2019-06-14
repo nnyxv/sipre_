@@ -1,0 +1,111 @@
+<?php
+//validaciones por regx PHP
+//ereg case sense
+//eregi no case sense
+//constantes
+define ('_CHARMILES',',');
+define ('_CHARDECIMAL','.');
+$NULLValue= "NULL";
+
+$patrones=array(
+	"e" => "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$",
+	"phone" => "",
+	"" => ""
+);
+
+$errors = array();
+
+function utf8parse($value){
+		return mb_convert_encoding($value,"UTF-8");
+}
+
+function excape($var){
+	return mysql_real_escape_string($var);
+}
+
+function parseNumber($num){
+	$re=str_replace(_CHARMILES,"",$num);
+	$re=str_replace(_CHARDECIMAL,".",$re);
+	if(!is_numeric($re)){
+		$re=0;
+	}
+	//echo "aqui: ".$re;
+	return $re;
+}
+
+function numformat($num,$dec=2,$ar1="",$ar2=""){//ar1 y ar2 se ignoran
+	$r=number_format($num, $dec,_CHARDECIMAL,_CHARMILES);
+	if ($r=="0.00"){
+		return "";
+	}else{
+		return $r;
+	}
+}
+
+//retorna dicho valor de la entrada especificada
+function getInput($name,$type,$errortext=" inv&aacute;lido.",$method="",$req=true){
+	global $errors,$patrones;
+	switch ($method){
+		case "post":
+			if (!isset($_POST[$name])){
+				$r=$NULLValue;
+			}else{
+				$r=$_POST[$name];
+			}
+			break;
+		case "get":
+			if (!isset($_GET[$name])){
+				$r=$NULLValue;
+			}else{
+				$r=$_GET[$name];
+			}
+			break;
+		case "session":
+			if (!isset($_SESSION[$name])){
+				$r=$NULLValue;
+			}else{
+				$r=$_SESSION[$name];
+			}
+			break;
+		case "":
+			$r=$name;
+	}
+	//echo "<br />valor: ".$r."<br />";
+	if (($r==$NULLValue && $req)){
+		$errors[]=array("m" => $r." no definido","o" => $name);
+	}else{		
+		switch($type){
+			case "t":
+			case "text":
+				break;
+			case "i" :
+				//trasformar previomente:
+				$r=parseNumber($r);
+				if (!is_integer($r)){
+					$errors[]=array("m" => $r.' '.$errortext,"o" => $name);
+					return $NULLValue;				
+				}
+				break;
+			case "f" :
+				//trasformar previomente:
+				$r=parseNumber($r);
+				if (!is_numeric($r)){
+					$errors[]=array("m" => $r.' '.$errortext,"o" => $name);
+					return $NULLValue;				
+				}
+				breaK;
+			default:
+				$p = $patrones[$type];
+				if ($p!=""){
+					if(!ereg($p,$r)){
+				//echo "<br />tipo: ".$p."<br />";
+						$errors[]=array("m" => $r.' '." ".$errortext,"o" => $name);
+						return $NULLValue;
+					}
+				}
+		}
+	}
+	return excape($r);
+}
+
+?>

@@ -1,0 +1,1052 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin-top:0
+}
+
+.bodyErp {
+	/*background-image:url(../img/fondo.jpg);*/
+	/*background-repeat:repeat;*/
+}
+.bodyVehiculos {
+	/*background-image:url(../img/fondo.jpg);*/
+	/*background-repeat:repeat-x;*/
+}
+
+
+#divGeneralErp {
+	background-color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0px auto;
+	text-align:center;
+	width:880px;
+}
+#divGeneralVehiculos {
+	background-color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	margin:0px auto;
+	text-align:center;
+	width:1010px;
+}
+#divGeneralPorcentaje {
+	background-color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0px auto;
+	text-align:center;
+	width:100%;
+}
+#divGeneralCaja {
+	background-color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0px auto;
+	text-align:center;
+	width:1050px;
+}
+#divInfo {
+	min-height:600px;
+}
+
+
+input{
+	border:1px solid #666;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+input[type="text"]{
+	padding:2px;
+}
+button{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:left;
+}
+button img {
+	margin-top:2px;
+	margin-right:2px;
+	clear:both;
+}
+textarea{
+	border:1px solid #666;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding:2px;
+}	
+select{
+	border:1px solid #666;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding:2px;
+}
+fieldset{
+	border-radius:6px;
+}
+
+.checkbox-label label {
+	display: block;
+	padding-left: 20px;
+	text-indent: -20px;
+}
+.checkbox-label input {
+	width: 20px;
+	height: 12px;
+	padding: 0;
+	margin:0;
+	vertical-align: bottom;
+	position: relative;
+	top: -0.9px;
+	*overflow: hidden;
+}
+
+.claseInput{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	border:0px solid #FFFFFF;
+	width:85%;
+	text-align:left;
+}
+.claseSelect{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	border:0px solid #FFFFFF;
+	width:100%;
+	text-align:left;
+}
+
+
+.inputInicial{
+	background-color:#FFF;
+}
+.inputErrado{ /* ROJO */
+	background-color:#FFEEEE;
+	border:1px solid #FF0000;
+}
+.inputErrado2{ /* AMARILLO */
+	background-color:#FFFFCC;
+	border:1px solid #D2D202;
+}
+.inputHabilitado{ /* AZUL */
+	background-color:#ECFCFF;
+}
+.inputInhabilitado{ /* GRIS */
+	background-color:#CCC;
+}
+.inputSinFondo{
+	background-color:transparent;
+	border:0px;
+	width:99%;
+}
+.inputSinFondoErrado{ /* ROJO */
+	background-color:#FFEEEE;
+	border:1px solid #FF0000;
+	width:99%;
+}
+.inputSinFondoErrado2{ /* AMARILLO */
+	background-color:#FFFFCC;
+	border:1px solid #D2D202;
+	width:99%;
+}
+.inputSinFondoHabilitado{ /* AZUL */
+	background-color:#ECFCFF;
+	width:99%;
+}
+.inputSinFondoInhabilitado{ /* GRIS */
+	background-color:#CCC;
+	width:99%;
+}
+.inputTotal{
+	background-color:#e6ffe6;
+	border:1px solid #006600;
+}
+
+
+.inputCompleto{
+	background-color:#FFF;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoErrado{ /* ROJO */
+	background-color:#FFEEEE;
+	border:1px solid #FF0000;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoErrado2{ /* AMARILLO */
+	background-color:#FFFFCC;
+	border:1px solid #D2D202;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoHabilitado{ /* AZUL */
+	background-color:#ECFCFF;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoInhabilitado{ /* GRIS */
+	background-color:#CCC;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoSinFondo{
+	background-color:transparent;
+	border:0px;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoSinFondoErrado{ /* ROJO */
+	background-color:#FFEEEE;
+	border:0px;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoSinFondoErrado2{ /* AMARILLO */
+	background-color:#FFFFCC;
+	border:0px;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoSinFondoHabilitado{ /* AZUL */
+	background-color:#ECFCFF;
+	border:0px;
+	min-width:10px;
+	width:99%;
+}
+.inputCompletoSinFondoInhabilitado{ /* GRIS */
+	background-color:#CCC;
+	border:0px;
+	min-width:10px;
+	width:99%;
+}
+input[type="text"].inputCompleto, input[type="text"].inputCompletoErrado, input[type="text"].inputCompletoErrado2, input[type="text"].inputCompletoHabilitado, input[type="text"].inputCompletoInhabilitado,
+input[type="text"].inputCompletoSinFondo, input[type="text"].inputCompletoSinFondoErrado, input[type="text"].inputCompletoSinFondoErrado2, input[type="text"].inputCompletoSinFondoHabilitado, input[type="text"].inputCompletoSinFondoInhabilitado,
+
+input[type="text"].inputSinFondo, input[type="text"].inputSinFondoErrado, input[type="text"].inputSinFondoErrado2, input[type="text"].inputSinFondoHabilitado, input[type="text"].inputSinFondoInhabilitado {
+	text-align:right;
+}
+
+
+.inputCantidadDisponible {
+	background-color:#DFFFE8;
+	border:1px solid #00CC00;
+}
+
+.inputCantidadNoDisponible {
+	background-color:#FFEEEE;
+	border:1px solid #FF0000;
+}
+
+
+.textoGrisOscuro {
+	color:#333;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.textoGrisNegrita {
+	color:#666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.textoAzulNegrita {
+	color:#00349A;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.textoRojoNegrita {
+	color:#FF0000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.textoVerdeNegrita {
+	color:#00BB2F;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.texto_8px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+}
+.textoNegrita_8px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	font-weight:bold;
+}
+.texto_9px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.textoNegrita_9px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight:bold;
+}
+.textoNegritaCursiva_9px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style:italic;
+	font-weight:bold;
+}
+.texto_10px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+.textoNegrita_10px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+}
+.textoAzulNegrita_10px {
+	color:#00349A;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+.textoNegroNegrita_10px {
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+.textoRojoNegrita_10px {
+	color:#FF0000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+.textoBlancoNegrita_10px {
+	color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+.textoGrisNegrita_10px {
+	color:#666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+}
+.textoVerdeNegrita_10px {
+	color:#00BB2F;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+.textoNegrita_11px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+}
+.textoGrisNegrita_11px {
+	color:#666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+}
+.textoBlancoNegrita_12px {
+	color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.texto_12px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.textoNegrita_12px {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+}
+.textoAzulNegrita_12px {
+	color:#00349A;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.textoGrisNegrita_13px {
+	color:#666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+}
+.textoNegroNegrita_14px {
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+.textoAzulCelesteNegrita_24px { /* CONTABILIDAD */
+	color:#1894EF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoAzulClaroNegrita_24px { /* CUENTAS POR PAGAR */
+	color:#00C1C1;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoAzulNegrita_24px { /* REPUESTOS */
+	color:#4068BB;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoDoradoNegrita_24px { /* CRM */
+	color:#D0B562;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoGrisNegrita_24px {
+	color:#666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoMarronNegrita_24px { /* CAJA VEHICULOS */
+	color:#412100;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoMoradoNegrita_24px { /* CUENTAS POR COBRAR */
+	color:#4D1592;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoMostazaNegrita_24px { /* CAJA REPUESTOS Y SERVICIOS */
+	color:#535300;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoNaranjaNegrita_24px { /* VEHICULOS */
+	color:#FFA620;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoNaranjaOscuroNegrita_24px { /* ALQUILER */
+	color:#D14B02;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoAzulGrisNegrita_24px { /* FINANCIAMIENTO */
+	color:#7788a8;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoNegroNegrita_24px { /* ERP */
+	color:#7F7F7F;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoVerdeNegrita_24px { /* COMPRAS */
+	color:#73C025;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoVerdeObscuroNegrita_24px {
+	color:#006400;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+.textoVinotintoNegrita_24px { /* TESORERIA */
+	color:#990000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+}
+
+
+.subtituloPagina {
+	color:#0066CC;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	text-align:left;
+}
+.subtituloPagina2 {
+	color:#E66200;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	text-align:left;
+}
+.tituloPaginaTesoreria {
+	border-bottom:2px solid #990000;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaErp {
+	border-bottom:2px solid #7F7F7F;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaVehiculos {
+	border-bottom:2px solid #FFA620;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaFinanciamientos {
+	border-bottom:2px solid #7788a8;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCompras {
+	border-bottom:2px solid #73C025;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCaja {
+	border-bottom:2px solid #592D00;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCajaRS {
+	border-bottom:2px solid #535300;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaContabilidad {
+	border-bottom:2px solid #1894EF;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCuentasPorCobrar {
+	border-bottom:2px solid #4D1592;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCuentasPorPagar {
+	border-bottom:2px solid #00C1C1;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaRepuestos {
+	border-bottom:2px solid #4068BB;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaServicios {
+	border-bottom:2px solid #056A00;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaAlquiler {
+	border-bottom:2px solid #D14B02;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloPaginaCrm {
+	border-bottom:2px solid #D0B562;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+}
+.tituloArea {
+	background-color:#999999;
+	border:1px solid #000000;
+	border-radius:6px;
+	color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px;
+}
+.tituloColumna {
+	color:#000000;
+	font-weight:bold;
+	padding:1px;
+}
+.tituloColumna td {
+	background-color:#CCCCCC;
+	border-radius:6px;
+	height:20px;
+	padding:1px;
+}
+.tituloCampo{
+	background-color:#F0F0F0;
+	border:1px solid #999999;
+	border-radius:6px;
+	color:#000000;
+	height:20px;
+}
+
+
+.punteadoCelda{
+	border:1px dotted #999999;
+}
+
+
+.divGris{
+	background-color:#F7F7F7;
+	border:1px solid #CCCCCC;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjAlerta{ /* AMARILLO */
+	background-color:#FFFFCC;
+	border:1px solid #D2D202;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjError{ /* ROJO */
+	background-color:#FFEEEE;
+	border:1px solid #FF0000;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo{ /* VERDE */
+	background-color:#E6FFE6;
+	border:1px solid #006600;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo2{ /* AZUL */
+	background-color:#DDEEFF;
+	border:1px solid #0066CC;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo3{ /* GRIS */
+	background-color:#CCCCCC;
+	border:1px solid #666666;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo4{ /* MORADO */
+	background-color:#EAD5FF;
+	border:1px solid #8000FF;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo5{ /* DORADO */
+	background-color:#FFC617;
+	border:1px solid #7D5F00;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjInfo6{ /* NARANJA */
+	background-color:#FFEED5;
+	border:1px solid #FFA620;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.divMsjAlertaSinBorde{ /* AMARILLO */
+	background-color:#FFFFCC;
+	color:#000000;
+	/*border:1px solid #D2D202;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+.divMsjErrorSinBorde{ /* ROJO */
+	background-color:#FFEEEE;
+	color:#000000;
+	/*border:1px solid #FF0000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+.divMsjInfoSinBorde{ /* VERDE */
+	background-color:#E6FFE6;
+	color:#000000;
+	/*border:1px solid #006600;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+.divMsjInfo2SinBorde{ /* AZUL */
+	background-color:#DDEEFF;
+	color:#000000;
+	/*border:1px solid #0066CC;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+.divMsjInfo3SinBorde{ /* GRIS */
+	background-color:#CCCCCC;
+	color:#000000;
+	/*border:1px solid #666666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+.divMsjInfo4SinBorde{ /* VERDE OSCURO */
+	background-color:#CCFFCC;
+	color:#000000;
+	/*border:1px solid #0066CC;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;*/
+}
+
+
+
+.tabla {
+	border-collapse:collapse;
+	border-color:#999999;
+}
+.bordeTabla {
+	border:1px solid #999999;
+}
+.bordeTabla_3px {
+	border:3px solid #8000FF;
+}
+
+
+
+.tdSelecBotonSucces{ /* VERDE */
+	background-color:#E6FFE6;
+	border:1px solid #006600;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.tdSelecBotonSucces:hover{ /* VERDE */
+	background-color:#8aff8a;
+	border:1px solid #006600;
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+
+/* PARA RESALTAR LAS FILAS DE LA VISTA PREVIA IMPORTAR (03-05-2017) */
+.trResaltarFilaImportar:hover, .trResaltar4:hover input, .trResaltar4:hover select, .trResaltar4:hover span {
+	background-color:#4068BB;
+	color:#FFFFFF;
+}
+
+
+.trResaltar { /* VERDE */
+	background-color:#E6FFE6;
+}
+.trResaltarRojo { /* ROJO */
+	background-color:#FFEEEE;
+}
+.trResaltarTotal { /* VERDE */
+	background-color:#E6FFE6;
+	border-top:2px solid #666666;
+	color:#000;
+	font-weight:bold;
+}
+.trResaltarTotal td { /* VERDE */
+	border-top:1px solid;
+}
+.trResaltarTotal2 { /* AZUL */
+	background-color:#DDEEFF;
+	border-top:2px solid #666666;
+	color:#000;
+	font-weight:bold;
+}
+.trResaltarTotal2 td { /* AZUL */
+	border-top:1px solid;
+}
+.trResaltarTotal3 { /* NARANJA */
+	background-color:#FFEED5;
+	border-top:2px solid #666666;
+	color:#000;
+	font-weight:bold;
+}
+.trResaltarTotal3 td { /* NARANJA */
+	border-top:1px solid;
+}
+
+.trResaltar4 {
+	background-color:#FFFFFF;
+}
+.trResaltar5 {
+	background-color:#EAF4FF;
+}
+.trResaltar6 {
+	background-color:#FFEED5;
+}
+.trResaltar7 {
+	background-color:#EEFFDD;
+}
+.trResaltarCj1 {
+	background-color:#EFEFEF;
+}
+.trResaltarCj2 {
+	background-color:#F7F7F7;
+}
+.trResaltarTesoreria1 {
+	background-color:#FFFFFF;
+}
+.trResaltarTesoreria2 {
+	background-color:#FFF4F4;
+}
+.trResaltar5Linea {
+	border-top:1px solid #0066CC;
+	border-bottom:1px solid #0066CC;
+}
+
+
+.tdMenuSeccion {
+	padding-bottom:4px;
+	padding-top:4px;
+}
+.tdMenuSeccion:hover {
+	background-color:#316AC5;
+	color:#FFFFFF;
+	cursor:pointer;
+	/*font-weight:bold;*/
+}
+.tdMenuSubSeccion {
+	padding-bottom:4px;
+	padding-top:4px;
+}
+.tdMenuSubSeccion:hover {
+	background-color:#999999;
+	color:#FFFFFF;
+	cursor:pointer;
+	/*font-weight:bold;*/
+}
+
+.trMembrete{ /* NEGRO */
+	background-color:#000000;
+	border:1px solid #FF0000;
+	color:#ffffff;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.imgBorde{
+	border:4px solid #999999;
+}
+
+
+
+.linkBlanco {
+	color:#FFFFFF;
+}
+
+.linkNegro {
+	color:#000000;
+}
+
+.linkAzulUnderline {
+	color:#003399;
+	text-decoration: none
+}
+
+.linkAzulUnderline:hover {
+	text-decoration:underline;
+}
+
+.puntero {
+	cursor:pointer;
+}
+.color_column_insertar_eliminar_item {
+	background:#FFCC66;
+}
+.color_column_aprobacion_item {
+	background:#090;
+}
+
+
+/* ESTILO DE LAS PESTAÑAS */
+.rafktabs_title {
+	background-color:#CCCCCC;
+	color:#000000;
+	cursor: pointer;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 2px;
+	padding: 2px 8px 2px 8px;
+}
+
+.rafktabs_titleActive {
+	background-color:#FFFFFF;
+	border-top:1px solid #000000;
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	color:#000000;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 2px;
+	padding: 2px 8px 2px 8px;
+}
+
+.rafktabs_title:hover {
+	background-color:#EAF4FF;
+	border-top:1px solid #0080FF;
+	border-left:1px solid #0080FF;
+	border-right:1px solid #0080FF;
+}
+
+.rafktabs_panel {
+	border:1px solid #000000;
+	clear: both;
+	overflow: auto;
+	padding: 2px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	background-color:#FFFFFF;
+}
+
+.solo_print{display:none}
+
+#load_animate{
+	/*position:fixed;
+	background-image:url(../img/iconos/multibox_loader.gif);
+	background-repeat:no-repeat;
+	left:48%;
+	top:42%;
+	z-index:100000000;
+	height:60px;
+	width:60px;*/
+	position:fixed;
+	background-image:url(../img/iconos/multibox_loader2.gif);
+	background-repeat:no-repeat;
+	left:41%;
+	top:42%;
+	z-index:100000000;
+	height:26px;
+	width:206px;
+}
+
+#acc {
+	width:614px;
+	list-style:none;
+	color:#033; 
+	margin:0 auto 40px
+}
+#acc h3 {
+	width:600px;
+	
+	border:1px solid #990000; 
+	padding:6px 6px 8px; 
+	font-weight:bold; margin-top:5px; 
+	cursor:pointer;
+	background:url(../img/header.png);height:10px;
+	color:#FFF
+}
+#acc h3:hover {
+	background:url(../img/header_over.png);height:10px;
+}
+#acc .acc-section {
+	overflow:hidden;
+	background:#FFF
+}
+#acc .acc-content {
+	width:582px; 
+	padding:15px; 
+	border:1px solid #990000;
+	border-top:none; 
+	background:#FFF
+}
+@media print {
+	/**				{display:none}*/
+	/*body, #impre	{display:block}*/
+	.print			{display:block;}
+	.solo_print		{display:block;}
+	.noprint		{display:none}
+}

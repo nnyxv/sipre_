@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+.root {
+	background-color:#FFFFFF;
+	border:6px solid #999999;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	max-width:960px;
+	position:absolute;
+	text-align:center;
+}
+
+.handle {
+	padding:2px;
+	background-color:#1894EF;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:move;
+}
+
+.trResaltar4 {
+	background-color:#FFFFFF;
+	height:20px;
+}
+
+.trResaltar5 {
+	background-color: #A9E0FE;
+	height:24px;
+}
+
+.trResaltar4 td, .trResaltar5 td {
+	padding:2px;
+}
+
+.trResaltar4:hover, .trResaltar4:hover input, .trResaltar4:hover select, .trResaltar4:hover span,
+.trResaltar5:hover, .trResaltar5:hover input, .trResaltar5:hover select, .trResaltar5:hover span {
+	background-color:#1894EF;
+	color:#FFFFFF;
+}
+
+.colorfondo {
+	background-color:#C4F3FF;	
+}
+
+.colorfondo2 {
+	background-color:#EBFDFE;	
+}
+
+
+.legend {
+	color:#1894EF;
+	font-weight:bold;
+}

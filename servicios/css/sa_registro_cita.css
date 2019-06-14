@@ -1,0 +1,316 @@
+.titulo_pagina{
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px;
+	text-align:right;
+	border-bottom:2px solid #009900;
+}
+.subtitulo_pagina{
+	font-weight:400;
+	font-size: 12px;
+}
+@media print {
+	.noprint		{display:none}
+}
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.table_max{
+	width:100%;
+}
+
+.table_max caption{
+	border:1px solid #000000;
+	background:#CCCCCC;
+	vertical-align:center;
+	font-weight:bold;
+}
+
+
+
+.td_calendario{
+	background: #CCCCCC;
+	padding:2px;
+	text-align:center;
+	vertical-align:top;
+}
+
+.td_asesores{
+	//width: *;
+
+}
+
+.tabla_tiempos{
+	border-collapse:collapse;
+	max-width:900px;
+}
+
+.td_asesores{
+	vertical-align:top;
+}
+
+#tabla_asesores{
+	overflow:auto;
+	max-width: 800px;
+	width: 790px;
+	height:550px;
+	padding:1px;
+}
+
+.asesor_list{
+	border-collapse:collapse;
+	width:96%
+	
+}
+.asesor_list thead td{
+	background:#CCCCCC;
+	text-align:center;
+	font-weight:bold;
+	padding:3px;
+	border:1px solid black;
+	
+}
+.asesor_list tbody td{
+	vertical-align:center;
+	border:1px solid gray;
+	text-align:center;	
+	padding:2px;
+	height:16px;
+	vertical-align:center;
+}
+
+.asesor_list tbody td div{
+	min-height:16px;
+	padding-left:32px;
+	background-repeat:no-repeat;
+	vertical-align:center;
+}
+
+.tabla_form{
+	width:100%;
+	/*border-collapse:collapse;*/
+}
+
+.tabla_form caption{
+	font-weight:bold;
+	padding:2px;
+	background:#CCCCCC;
+	border:1px solid gray;
+	
+}
+.tabla_form  td.form_label,
+.tabla_form  td.form_field{
+	border:1px solid gray;
+	width:25%;
+}
+.tabla_form  td.form_label{
+	background:#DFDFDF;
+}
+/*FILAS*/
+
+/*
+_reserva va NATES de _impar o al final
+*/
+.tr_impar{
+	background: #FFFFFF;
+}
+.tr_reserva_impar{
+	background:#FEFF5F;
+}
+.tr{
+	background:#F8F8F8;
+}
+.tr_reserva{
+	background:#FEFF5F;
+}
+
+
+.tr_cita_baja,
+.tr_cita_baja_reserva{
+	background: #BFBFBF;
+}
+.tr_cita_baja_impar,
+.tr_cita_baja_reserva_impar{
+	background: #CCCCCC;
+}
+
+.tr_cita_baja_parcial,
+.tr_cita_baja_parcial_reserva{
+	background: #B3DF00;
+}
+.tr_cita_baja_parcial_impar,
+.tr_cita_baja_parcial_reserva_impar{
+	background: #A6CF00;
+}
+
+.tr_cita_baja_feriado,
+.tr_cita_baja_feriado_impar,
+.tr_cita_baja_feriado_reserva,
+.tr_cita_baja_feriado_reserva_impar{
+	background: #FFBF00;
+}
+/*CELDAS*/
+.td_cita_baja{
+	background: #FFE08F;
+}
+.td_cita_baja_impar{
+	background: #FFE59F;
+}
+
+.leyenda{
+	clear:both;
+	padding: 1px;
+}
+.tr_cita_baja:hover,
+.tr_cita_baja_parcial:hover,
+.tr_cita_baja_feriado:hover,
+.asesor_list tbody tr:hover,
+.td_cita_baja:hover,
+.td_cita_baja_impar:hover
+{
+	background:#C8E4FF;
+}
+#leyend,#leyend_cita{
+	width:13px;
+	height:13px;
+	float:left;
+	margin-right:2px;
+	border:1px solid #000000;
+}
+#leyend_cita{
+	height:16px;
+	width:16px;
+	border:0px;
+}
+.a_cita_new{
+	text-decoration:none;
+	cursor:pointer;
+}
+.a_cita_new:hover{
+	color:red;
+}
+/*estados de las citas:*/
+
+.cita_PROGRAMADA,
+.cita_PROGRAMADA_PENDIENTE
+{
+	background-image: url(../../img/iconos/cita_programada_pendiente.png);
+}
+
+.cita_PROGRAMADA_CONFIRMADA,
+.cita_CONFIRMADA{
+	background-image: url(../../img/iconos/cita_programada_confirmada.png);	
+}
+
+.cita_PROGRAMADA_PROCESADA,
+.cita_PROCESADA
+{
+	background-image: url(../../img/iconos/cita_programada_procesada.png);
+}
+
+.cita_PROGRAMADA_CANCELADA,
+.cita_CANCELADA
+{
+	background-image: url(../../img/iconos/cita_programada_cancelada.png);
+}
+
+.cita_PROGRAMADA_RETRAZADA,
+.cita_RETRAZADA
+{
+	background-image: url(../../img/iconos/cita_programada_retrazada.png);
+}
+.cita_ENTRADA_RETRAZADA
+{
+	background-image: url(../../img/iconos/cita_entrada_retrazada.png);
+}
+
+.cita_PROGRAMADA_INCUMPLIDA,
+.cita_INCUMPLIDA
+{
+	background-image: url(../../img/iconos/cita_programada_incumplida.png);
+}
+
+
+.cita_ENTRADA,
+.cita_ENTRADA_PROCESADA
+{
+	background-image: url(../../img/iconos/cita_entrada_procesada.png);
+}
+
+.cita_ENTRADA_INCUMPLIDA
+{
+	background-image: url(../../img/iconos/cita_entrada_incumplida.png);
+}
+
+
+.cita_ENTRADA_PENDIENTE,
+.cita_PENDIENTE
+{
+	background-image: url(../../img/iconos/cita_entrada_pendiente.png);
+}
+
+.cita_ENTRADA_CANCELADA
+{
+	background-image: url(../../img/iconos/cita_entrada_cancelada.png);
+}
+
+.cita_ENTRADA_SOLA
+{
+	background-image: url(../../img/iconos/cita_entrada.png);
+}
+
+.cita_PROGRAMADA_PENDIENTE,
+.cita_PROGRAMADA_CONFIRMADA,
+.cita_PROGRAMADA_PROCESADA,
+.cita_PROGRAMADA_CANCELADA,
+.cita_PROGRAMADA_RETRAZADA,
+.cita_PROGRAMADA_INCUMPLIDA,
+.cita_ENTRADA_PROCESADA,
+.cita_ENTRADA_CANCELADA
+{
+	background-position: 0px 50%;
+}
+.cita_PENDIENTE,
+.cita_CONFIRMADA,
+.cita_PROCESADA,
+.cita_CANCELADA,
+.cita_RETRAZADA,
+.cita_INCUMPLIDA
+{
+	background-position: -16px 0px;
+}
+
+.asesor_list tbody td .info,
+.asesor_list tbody td .info_edit{
+	padding:0px;
+	padding-right:16px;
+}
+.asesor_list tbody td .info:hover
+{
+	/*background:#C8E4FF;*/
+	background-image: url(../../img/iconos/cita_add.png);
+	background-position: 99% 50%;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.asesor_list tbody td .info_edit:hover
+{
+	/*background:#C8E4FF;*/
+	background-image: url(../../img/iconos/edit.png);
+	background-position: 99% 50%;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.campo_cita{
+	border:0px;
+}
+
+button img{
+	margin-top:2px;
+	margin-right:2px;
+	clear:both;
+}

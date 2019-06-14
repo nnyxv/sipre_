@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+	
+ <body>
+
+<script language="javascript">
+
+
+
+   function cargawin()
+        {
+          //this.focus(); self.opener = this; self.close();
+          //width='+screen.availWidth+',height=600,left=10
+          //if (screen.width > 800){
+            window.open('principal.htm','Nada','width='+screen.availWidth+',height='+screen.availHeight+',left=10,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+          //}else{
+            window.open('principal.htm','Nada','fullscreen=yes,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+          //}
+          
+        }
+    function closeWindow() {
+    
+        ns4 = (document.layers)? true:false
+	ie4 = (document.all)? true:false
+
+	if (ie4) {
+		this.focus(); self.opener = this; self.close();
+	}else{
+            window.open('','_parent','');
+            window.close();
+        }
+
+    }
+    
+    window.setTimeout('closeWindow()',2000);
+    cargawin();
+</script>
+   
+    </body>
+</html>

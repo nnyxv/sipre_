@@ -1,0 +1,277 @@
+<?php
+require_once("connections/conex.php");
+
+session_start();
+
+/* Validación del Módulo */
+include('inc_sesion.php');
+if(!(validaAcceso("pg_cargo_departamento_list"))) {
+	echo "<script> alert('Acceso Denegado'); top.history.back(); </script>";
+}
+/* Fin Validación del Módulo */
+
+require ('controladores/xajax/xajax_core/xajax.inc.php');
+//Instanciando el objeto xajax
+$xajax = new xajax();
+//Configuranto la ruta del manejador de scritp
+$xajax->configure('javascript URI', 'controladores/xajax/');
+
+include("controladores/ac_iv_general.php");
+include("controladores/ac_pg_cargo_departamento_list.php");
+
+//$xajax->setFlag('debug',true);
+//$xajax->setFlag('allowAllResponseTypes', true);
+
+$xajax->processRequest();
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>.: SIPRE <?php echo cVERSION; ?> :. Cargos por Departamento</title>
+    <link rel="icon" type="image/png" href="<?php echo $raiz; ?>img/login/icono_sipre_png.png" />
+    <?php $xajax->printJavascript('controladores/xajax/');//indicamos al objeto xajax se encargue de generar javascript necesario ?>
+
+    <link rel="stylesheet" type="text/css" href="style/styleRafk.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="js/domDragErp.css">
+    <script type="text/javascript" language="javascript" src="js/jquerytools/jquery.tools.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/dom-drag.js"></script>
+	<script type="text/javascript" language="javascript" src="js/scriptRafk.js"></script>
+    <script type="text/javascript" language="javascript" src="js/validaciones.js"></script>
+    
+	<link rel="stylesheet" type="text/css" media="all" href="js/jsdatepick-calendar/jsDatePick_ltr.min.css"/>
+	<script type="text/javascript" language="javascript" src="js/jsdatepick-calendar/jsDatePick.jquery.min.1.3.js"></script>
+    
+	<script type="text/javascript" language="javascript" src="js/maskedinput/jquery.maskedinput.js"></script>
+
+	<script>
+	function abrirDivFlotante1(nomObjeto, verTabla, valor) {
+		byId('tblCargoDepartamento').style.display = 'none';
+		
+		if (verTabla == "tblCargoDepartamento") {
+			document.forms['frmCargoDepartamento'].reset();
+			byId('hddIdCargoDepartamento').value = '';
+			
+			xajax_formCargoDepartamento(valor, xajax.getFormValues('frmCargoDepartamento'));
+			
+			if (valor > 0) {
+				tituloDiv1 = 'Editar Cargo por Departamento';
+			} else {
+				tituloDiv1 = 'Agregar Cargo por Departamento';
+			}
+		}
+		
+		byId(verTabla).style.display = '';
+		openImg(nomObjeto);
+		byId('tdFlotanteTitulo1').innerHTML = tituloDiv1;
+	}
+	
+	function validarFrmCargoDepartamento(){
+		if (validarCampo('lstEmpresaCargoDep','t','lista') == true
+		&& validarCampo('lstDepartamento','t','lista') == true
+		&& validarCampo('lstCargo','t','lista') == true)  {
+			byId('btnGuardarCargoDepartamento').disabled = true;
+			byId('btnCancelarCargoDepartamento').disabled = true;
+			xajax_guardarCargoDepartamento(xajax.getFormValues('frmCargoDepartamento'), xajax.getFormValues('frmListaCargoDepartamento'));
+		} else {
+			validarCampo('lstEmpresaCargoDep','t','lista')
+			validarCampo('lstDepartamento','t','lista')
+			validarCampo('lstCargo','t','lista')
+
+			alert("Los campos señalados en rojo son requeridos");
+			return false;
+		}
+	}
+	
+	function validarEliminar(idCargoDepartamento){
+		if (confirm('Seguro desea eliminar este registro?') == true) {
+			xajax_eliminarCargoDepartamento(idCargoDepartamento, xajax.getFormValues('frmListaCargoDepartamento'));
+		}
+	}
+    </script>
+</head>
+<body class="bodyVehiculos">
+<div id="divGeneralPorcentaje">
+    <div class="noprint"><?php include("sysgts_menu.inc.php"); ?></div>
+    
+    <div id="divInfo" class="print">
+        <table border="0" width="100%">
+        <tr>
+            <td class="tituloPaginaErp">Cargos por Departamento</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+            	<table align="left" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                	<td>
+                    <a class="modalImg" id="aNuevo" rel="#divFlotante1" onclick="abrirDivFlotante1(this, 'tblCargoDepartamento');">
+                    	<button type="button"><table align="center" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td><td><img class="puntero" src="img/iconos/ico_new.png" title="Nuevo"/></td><td>&nbsp;</td><td>Nuevo</td></tr></table></button>
+                    </a>
+                    </td>
+                </tr>
+                </table>
+                
+            <form id="frmBuscar" name="frmBuscar" style="margin:0" onsubmit="return false;">
+                <table align="right" border="0">
+                <tr align="left">
+                	<td align="right" class="tituloCampo">Empresa:</td>
+                    <td id="tdlstEmpresa" colspan="3">
+                        <select id="lstEmpresa" name="lstEmpresa">
+                            <option value="-1">[ Todos ]</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr align="left">
+                    <td align="right" class="tituloCampo" width="120">Departamento:</td>
+                    <td id="tdlstDepartamentoBuscar">
+                        <select id="lstDepartamentoBuscar" name="lstDepartamentoBuscar">
+                            <option value="-1">[ Todos ]</option>
+                        </select>
+                    </td>
+                    <td align="right" class="tituloCampo" width="120">Criterio:</td>
+                    <td><input type="text" id="txtCriterio" name="txtCriterio" onkeyup="byId('btnBuscar').click();" size="20"/></td>
+                    <td>
+                        <button type="submit" id="btnBuscar" name="btnBuscar" onclick="xajax_buscarCargoDepartamento(xajax.getFormValues('frmBuscar'));">Buscar</button>
+                        <button type="button" onclick="document.forms['frmBuscar'].reset(); byId('btnBuscar').click();">Limpiar</button>
+                    </td>
+                </tr>
+                </table>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <form id="frmListaCargoDepartamento" name="frmListaCargoDepartamento" style="margin:0">
+            	<div id="divListaCargoDepartamento" style="width:100%"></div>
+            </form>
+            </td>
+        </tr>
+        </table>
+    </div>
+    
+    <div class="noprint"><?php include("pie_pagina.php"); ?></div>
+</div>
+</body>
+</html>
+
+<div id="divFlotante1" class="root" style="cursor:auto; display:none; left:0px; position:absolute; top:0px; z-index:0;">
+	<div id="divFlotanteTitulo1" class="handle"><table><tr><td id="tdFlotanteTitulo1" width="100%"></td></tr></table></div>
+
+<form id="frmCargoDepartamento" name="frmCargoDepartamento" style="margin:0" onsubmit="return false;">
+    <table border="0" id="tblCargoDepartamento" width="360">
+    <tr>
+    	<td>
+        	<table width="100%">
+            <tr align="left">
+                <td align="right" class="tituloCampo" width="30%"><span class="textoRojoNegrita">*</span>Empresa:</td>
+                <td width="70%" id="tdlstEmpresaCargoDep">
+                    <select id="lstEmpresaCargoDep" name="lstEmpresaCargoDep">
+                        <option value="-1">[ Seleccione ] </option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="left">
+                <td align="right" class="tituloCampo"><span class="textoRojoNegrita">*</span>Departamento:</td>
+                <td id="tdlstDepartamento">
+                    <select id="lstDepartamento" name="lstDepartamento">
+                        <option value="-1">[ Seleccione ] </option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="left">
+                <td align="right" class="tituloCampo"><span class="textoRojoNegrita">*</span>Cargo:</td>
+                <td id="tdlstCargo">
+                    <select id="lstCargo" name="lstCargo">
+                        <option value="-1">[ Seleccione ] </option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="left">
+                <td align="right" class="tituloCampo">Clave de Filtro:</td>
+                <td id="tdlstClaveFiltro">
+                    <select id="lstClaveFiltro" name="lstClaveFiltro">
+                        <option value="-1">[ Seleccione ] </option>
+                    </select>
+                </td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+    	<td align="right"><hr>
+            <input type="hidden" id="hddIdCargoDepartamento" name="hddIdCargoDepartamento"/>
+            <button type="button" id="btnGuardarCargoDepartamento" name="btnGuardarCargoDepartamento" onclick="validarFrmCargoDepartamento();">Guardar</button>
+            <button type="button" id="btnCancelarCargoDepartamento" name="btnCancelarCargoDepartamento" class="close">Cancelar</button>
+        </td>
+    </tr>
+    </table>
+</form>
+</div>
+
+<script language="javascript">
+byId('txtCriterio').className = "inputHabilitado";
+
+function openImg(idObj) {
+	var oldMaskZ = null;
+	var $oldMask = $(null);
+	
+	$(".modalImg").each(function() {
+		$(idObj).overlay({
+			//effect: 'apple',
+			oneInstance: false,
+			zIndex: 10100,
+			
+			onLoad: function() {
+				if ($.mask.isLoaded()) {
+					oldMaskZ = $.mask.getConf().zIndex; // this is a second overlay, get old settings
+					$oldMask = $.mask.getExposed();
+					$.mask.getConf().closeSpeed = 0;
+					$.mask.close();
+					this.getOverlay().expose({
+						color: '#000000',
+						zIndex: 10090,
+						closeOnClick: false,
+						closeOnEsc: false,
+						loadSpeed: 0,
+						closeSpeed: 0
+					});
+				} else { // ABRE LA PRIMERA VENTANA
+					this.getOverlay().expose({
+						color: '#000000',
+						zIndex: 10090,
+						closeOnClick: false,
+						closeOnEsc: false
+					});
+				} // Other onLoad functions
+			},
+			onClose: function() {
+				$.mask.close();
+				if ($oldMask != null) { // re-expose previous overlay if there was one
+					$oldMask.expose({
+						color: '#000000',
+						zIndex: oldMaskZ,
+						closeOnClick: false,
+						closeOnEsc: false,
+						loadSpeed: 0
+					});
+					
+					$(".apple_overlay").css("zIndex", oldMaskZ + 2); // Assumes the other overlay has apple_overlay class
+				}
+			}
+		}).load();
+	});
+}
+
+xajax_cargaLstEmpresaFinal('<?php echo $_SESSION['idEmpresaUsuarioSysGts']; ?>', 'onchange=\"xajax_cargaLstDepartamentoBuscar(this.value); byId(\'btnBuscar\').click();\"');
+xajax_cargaLstDepartamentoBuscar('<?php echo $_SESSION['idEmpresaUsuarioSysGts']; ?>');
+xajax_listaCargoDepartamento(0, 'id_cargo_departamento', 'ASC', '<?php echo $_SESSION['idEmpresaUsuarioSysGts']; ?>');
+
+var theHandle = document.getElementById("divFlotanteTitulo1");
+var theRoot   = document.getElementById("divFlotante1");
+Drag.init(theHandle, theRoot);
+</script>

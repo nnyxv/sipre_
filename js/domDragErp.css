@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+.root {
+	background-color:#FFFFFF;
+	border:6px solid #999999;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	max-width:960px;
+	position:absolute;
+	text-align:center;
+}
+
+.handle {
+	padding:2px;
+	background-color:#7F7F7F;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:move;
+}
+
+.trResaltar4 {
+	background-color:#FFFFFF;
+	height:24px;
+}
+
+.tablaResaltarPar tbody tr:nth-child(even), .tablaResaltarImpar tbody tr:nth-child(odd),
+.trResaltar5 {
+	background-color:#EAEAEA;
+	height:24px;
+}
+
+.trResaltar4 td, .trResaltar5 td {
+	padding:2px;
+}
+
+.tablaResaltarPar tbody tr:hover, .tablaResaltarImpar tbody tr:hover,
+.trResaltar4:hover, .trResaltar4:hover input, .trResaltar4:hover select, .trResaltar4:hover span, .trResaltar4:hover a, .trResaltar4:hover legend, .trResaltar4:hover div,
+.trResaltar5:hover, .trResaltar5:hover input, .trResaltar5:hover select, .trResaltar5:hover span, .trResaltar5:hover a, .trResaltar5:hover legend, .trResaltar5:hover div {
+	background-color:#7F7F7F;
+	color:#FFFFFF;
+}
+
+.trResaltar4:hover a,
+.trResaltar5:hover a {
+	background-color:#7F7F7F;
+	color:#FFFFFF;
+}
+
+.legend {
+	color:#7F7F7F;
+	font-weight:bold;
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+.root {
+	background-color:#003;
+	border:6px solid #999999;
+	border-radius:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	max-width:980px;
+	position:absolute;
+	text-align:center;
+}
+
+.handle {
+	padding:2px;
+	background-color:#0057AE;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:move;
+}
+
+.trResaltar4 {
+	color:#CCC;
+	height:24px;
+}
+
+.trResaltar5 {
+	background-color:#1f2124;
+	color:#CCC;
+	height:24px;
+}
+
+.trResaltar4 td, .trResaltar5 td {
+	padding:2px;
+}
+
+.trResaltar:hover, .trResaltar:hover input, .trResaltar:hover select, .trResaltar:hover span,
+.trResaltar2:hover, .trResaltar2:hover input, .trResaltar2:hover select, .trResaltar2:hover span,
+.trResaltar4:hover, .trResaltar4:hover input, .trResaltar4:hover select, .trResaltar4:hover span,
+.trResaltar5:hover, .trResaltar5:hover input, .trResaltar5:hover select, .trResaltar5:hover span,
+.trResaltarTotal:hover, .trResaltarTotal:hover input, .trResaltarTotal:hover select, .trResaltarTotal:hover span,
+.trResaltarTotal2:hover, .trResaltarTotal2:hover input, .trResaltarTotal2:hover select, .trResaltarTotal2:hover span,
+.trResaltarTotal3:hover, .trResaltarTotal3:hover input, .trResaltarTotal3:hover select, .trResaltarTotal3:hover span {
+	background-color:#42A2BC;
+	color:#FFF;
+}
+
+.legend {
+	color:#00349A;
+	font-weight:bold;
+}
